@@ -46,7 +46,7 @@ Return type of variables in JavaScript
 */
 
 
-// STACK memory( for primitive datatypes): copy is given , Heap memory (for Non- Primitive datatypes) : reference is given
+// STACK memory( for primitive datatypes): copy is given  , Heap memory (for Non- Primitive datatypes) : reference is given
 
 let myYoutubename  = "arman"
 
