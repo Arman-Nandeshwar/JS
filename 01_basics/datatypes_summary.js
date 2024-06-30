@@ -45,3 +45,23 @@ Return type of variables in JavaScript
        Object  =>  object
 */
 
+
+// STACK memory( for primitive datatypes): copy is given , Heap memory (for Non- Primitive datatypes) : reference is given
+
+let myYoutubename  = "arman"
+
+let anotherName = myYoutubename
+anotherName = "nandeshwar"
+
+console.log(myYoutubename);
+console.log(anotherName);
+
+//----------------
+let userOne  = {
+    email : "user@google.com",
+    upi : "user@ybl",
+}
+let userTwo = userOne
+userTwo.email = "arman@1122"
+console.log(userOne.email);
+console.log(userTwo.email);
