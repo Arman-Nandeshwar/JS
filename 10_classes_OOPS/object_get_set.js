@@ -1,4 +1,4 @@
-//object based getters and setters
+//object based getters and setters(old(rarely seen))
 
 const User = {
     _email : 'h@hc.com',
