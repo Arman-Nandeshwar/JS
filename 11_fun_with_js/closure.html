@@ -1,0 +1,82 @@
+<!-- A closure gives you access to an outer function's scope from an inner function -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>closure</title>
+</head>
+<body style="background-color: #313131;">
+    <button id="orange">Orange</button>
+    <button id="green">Green</button>
+</body>
+
+<!-- in simple words, inner function can access variables of outer function -->
+<script>
+    // function init(){
+    //     let name = "mozilla";
+    //     function displayName(){
+    //         console.log(name);
+            
+    //     }
+    //     displayName();
+    // }
+    // init();
+ //-------------------------------------------------------LEXICAL SCOPING
+    // function outer(){
+    //     let username = "hitesh"
+    //     console.log("OUter",secret); //this will also give error as we cannot access secret
+        
+    //     function inner(){
+    //         let secret = "my123"
+    //         console.log("inner" ,username);
+    //     }
+    //     function innerTwo(){
+    //         console.log("innerTwo",username);
+    //         console.log(secret) //this will also give error
+    //     }
+    //     inner()
+    //     innerTwo()
+    // }
+    // outer()
+    // console.log("TOO OUTER",username); //this will give error as we cannot aceess username outside the scope
+    
+
+    //------------------------CLOSURE
+
+    // function makeFunc(){
+    //     const name = "mozilla"
+    //     function displayName(){
+    //         console.log(name)
+    //     }
+    //     return displayName  //not only returns the reference of the inner function but returns the whole outer function
+    // }
+
+    // const myFunc  = makeFunc()
+    // myFunc()
+</script>
+
+<script>
+    // document.getElementById("orange").onclick = function(){
+    //     document.body.style.backgroundColor =  `orange`
+    // }
+    // document.getElementById("green").onclick = function(){
+    //     document.body.style.backgroundColor =  `green`
+    // }
+
+    //REAL WORLD ISSUE EXAMPLE-----------------CLOSURE
+    function clickHandler(color){
+        // document.body.style.backgroundColor = `${color}
+
+        return function(){
+            document.body.style.backgroundColor= `${color}`
+        }
+    }
+
+    document.getElementById('orange').onclick = clickHandler("orange")
+    document.getElementById('green').onclick = clickHandler("green")
+
+</script>
+</html>
